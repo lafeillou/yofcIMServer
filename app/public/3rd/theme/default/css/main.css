@@ -232,6 +232,13 @@
     content: "\f013"
 }
 
+
+/*搜索*/
+
+.yofcMsgr .fa-search:before {
+    content: "\f002"
+}
+
 .yofcMsgr .sr-only {
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -344,4 +351,112 @@
 
 .yofcMsgrDock .uiToggle .rFloat {
     float: right;
+}
+
+.yofcMsgrDock .uiToggle .lFloat {
+    float: left;
+}
+
+
+/*分界线*/
+
+.yofcMsgrDock .uiToggle .divideLine {
+    height: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/*列表容器*/
+
+.yofcMsgrDock .uiToggle .contactListWrap {}
+
+
+/*好友列表*/
+
+.yofcMsgrDock .uiToggle .contactListWrap .friendsListWrap {
+    /* background-color:red; */
+}
+
+
+/*单条好友项目的样式*/
+
+.yofcMsgrDock .uiToggle .contactListWrap .friendsListWrap .friendItem {
+    padding: 10px 15px;
+    overflow: hidden;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .friendsListWrap .friendItem .headerImgWrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .friendsListWrap .friendItem .headerImgWrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .friendsListWrap .friendItem .friendTitleWrap {
+    display: inline-block;
+    line-height: 32px;
+    margin-left: 10px;
+}
+
+
+/*群组联系列表*/
+
+.yofcMsgrDock .uiToggle .contactListWrap .chatroomListWrap {}
+
+.yofcMsgrDock .uiToggle .contactListWrap .chatroomListWrap .groupItem {
+    padding: 10px 15px;
+    overflow: hidden;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .chatroomListWrap .groupItem .headerImgWrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .chatroomListWrap .groupItem .headerImgWrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .chatroomListWrap .groupItem .groupTitleWrap {
+    display: inline-block;
+    line-height: 32px;
+    margin-left: 10px;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .chatroomListWrap .h5-title {
+    font-weight: bold;
+    padding: 4px 15px;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .searchBarWrap {}
+
+.yofcMsgrDock .uiToggle .contactListWrap .searchBarWrap .searchBarIcon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+    float: left;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap .searchBarWrap .searchBarInput {
+    display: inline-block;
+    border: none;
+    width: 280px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
 }
