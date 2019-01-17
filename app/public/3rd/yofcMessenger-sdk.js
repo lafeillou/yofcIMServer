@@ -25,13 +25,15 @@
     }
 
     yofcMessenger.init = function (cb) {
+        
         loadScript('http://localhost:7001/public/3rd/seajs/2.2.3/sea.js', function () {
-            //配置seajs
+            loadScript('http://localhost:7001/public/3rd/seajs/plugins/seajs-text.js', function () {
+                 //配置seajs
             seajs.config({
                 alias: {
                     "nimWebNetCall": "sdk/NIM_Web_Netcall_Module_v5.6.0",
                     "nimWebSDK": "sdk/NIM_Web_SDK_Module_v5.6.0",
-                    "speedContactFn": "ui-components/speedContactPlane",
+                    "speedContactFn": "ui-components/speedContactPlane/speedContactPlane",
                     //这里用的jquery同发布者环境用的jquery是独立的，比如发布者环境的window.jquery的版本是3.3.1,而这里是2.2.4
                     "jquery": "sdk/jquery_v2.2.4_Module",
                     //模板引擎
@@ -50,6 +52,7 @@
                 console.log(nimWebNetCall);
                 console.log(nimWebSDK);
             });
+        });
         });
     }
 

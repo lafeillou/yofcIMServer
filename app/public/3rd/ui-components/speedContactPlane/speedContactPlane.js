@@ -1,8 +1,9 @@
 define(function (require, exports, module) {
     var ejs = require('ejs');
     var $ = require('jquery');
+    var template = require('./speedContactPlane.tpl');
+    alert(template);
 
-    console.log($.fn);
     module.exports = {
         initPlane: function () {
             let people = ['geddy', 'neil', 'alex'],
