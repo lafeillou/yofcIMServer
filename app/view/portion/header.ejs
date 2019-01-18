@@ -24,15 +24,14 @@
     <header>
         <!--顶部导航 begin-->
         <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-primary">
-            <a class="navbar-brand" href="#" style="color:#fff;">YOFCMessenger</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/" style="color:#fff;">YOFCMessenger</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" style="color:#fff;"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">项目介绍 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">项目介绍 <span class="sr-only">(current)</span></a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#">联系人管理</a>
@@ -50,10 +49,10 @@
                     <% if(userName) { %>
                     <span style="color:#fff;">
                         <%=userName %>,</span><a href="/logOut" style="color:#fff;">退出</a>
-                    <% } else {%>
+                <% } else {%>
                     <a href="/signIn" style="color:#fff;">登录/注册</a>
                     <% } %>
-                </span>
+                        </span>
             </div>
         </nav>
         <!--顶部导航 end-->

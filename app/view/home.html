@@ -1,75 +1,75 @@
 <%-include('portion/header'); %>
-
     <div class="jumbotron jumbotron-fluid" style="margin-bottom:0;">
         <div class="container">
             <h1 class="display-5">YOFC Messenger 长飞Web应用IM应用管理平台</h1>
             <p class="lead">依赖网易云信IM功能，提供统一的IM用户管理，提供JSSDK供目标应用集成，简单易用</p>
         </div>
     </div>
-    <h2 style="margin-top:0.5em;">1.项目介绍</h2>
-    <p style="text-indent:2em;padding:0 50px;font-size:18px;">yofc Messenger是受到Facebook Messenger的启发开发的一款通用IM应用管理程序。主要是为了智慧检务团队开发的web应用程序快速便捷引入网易云信IM功能的而开发的统一接入平台； 即自研应用不再去分散对接网易云信，而是只需要引入yofc Messenger提供的JSSDK，集成方式就是引入一个&lt;script&gt;标签并做少量配置,大大简化了集成过程，并且在yofc messenger可以做一些定制开发，更方便的管理通讯的各方用户，基于用户数据扩展更多功能。
-    </p>
+    <div class="homePageContainer" style="padding:0 30px;">
+        <h2 style="margin-top:0.5em;">1.项目介绍</h2>
+        <p style="text-indent:2em;padding:0 50px;font-size:18px;">yofc Messenger是受到Facebook Messenger的启发开发的一款通用IM应用管理程序。主要是为了智慧检务团队开发的web应用程序快速便捷引入网易云信IM功能的而开发的统一接入平台； 即自研应用不再去分散对接网易云信，而是只需要引入yofc Messenger提供的JSSDK，集成方式就是引入一个&lt;script&gt;标签并做少量配置,大大简化了集成过程，并且在yofc messenger可以做一些定制开发，更方便的管理通讯的各方用户，基于用户数据扩展更多功能。
+        </p>
 
-    <div style="padding:0 50px;">
-        <h3>功能列表：</h3>
-        <ul>
-            <li>新增应用，编辑应用信息</li>
-            <li>注册用户，一个应用下可以新增多个用户，编辑用户注册信息、删除用户</li>
-        </ul>
-    </div>
+        <div style="padding:0 50px;">
+            <h3>功能列表：</h3>
+            <ul>
+                <li>新增应用，编辑应用信息</li>
+                <li>注册用户，一个应用下可以新增多个用户，编辑用户注册信息、删除用户</li>
+            </ul>
+        </div>
 
-    <h2 style="margin-top:0.5em;">2.开发者须知</h2>
-    <div style="padding:0 50px">
-        <h3>需要Fork的库:</h3>
-        <ul>
-            <li>yofcIMServer(主项目库):&nbsp;&nbsp;<a href="https://github.com/lafeillou/yofcIMServer.git" target="_blank">https://github.com/lafeillou/yofcIMServer.git</a></li>
-            <li>yofcIM(测试项目库):&nbsp;&nbsp;<a href="https://github.com/lafeillou/yofcIM.git" target="_blank">https://github.com/lafeillou/yofcIM.git</a></li>
-            <li>长飞公司归档库:&nbsp;&nbsp;<a href="http://10.80.65.35:8080/gitblit/summary/Pre-Research!yofcloudWebIM.git" target="_blank">http://10.80.65.35:8080/gitblit/summary/Pre-Research!yofcloudWebIM.git</a></li>
-        </ul>
+        <h2 style="margin-top:0.5em;">2.开发者须知</h2>
+        <div style="padding:0 50px">
+            <h3>需要Fork的库:</h3>
+            <ul>
+                <li>yofcIMServer(主项目库):&nbsp;&nbsp;<a href="https://github.com/lafeillou/yofcIMServer.git" target="_blank">https://github.com/lafeillou/yofcIMServer.git</a></li>
+                <li>yofcIM(测试项目库):&nbsp;&nbsp;<a href="https://github.com/lafeillou/yofcIM.git" target="_blank">https://github.com/lafeillou/yofcIM.git</a></li>
+                <li>长飞公司归档库:&nbsp;&nbsp;<a href="http://10.80.65.35:8080/gitblit/summary/Pre-Research!yofcloudWebIM.git" target="_blank">http://10.80.65.35:8080/gitblit/summary/Pre-Research!yofcloudWebIM.git</a></li>
+            </ul>
 
-        <h3>开发环境需要的软件:</h3>
-        <ul>
-            <li>安装Python，就只用到一个命令：python -m SimpleHTTPServer 8000; 8000为端口号，可改为其他值</li>
-            <li>Mysql数据库，这里推荐安装WampServer,一款集成apache/php/mysql的一键安装软件，这里我们只用到mysql</li>
-            <li>安装nodejs,由于项目用到了eggjs/vue3等框架开发，因此nodejs版本推荐8.11.x及以上</li>
-            <li>编辑器推荐VSCode,推荐安装下列插件:eggjs 0.3.1/Vetur 0.14.5</li>
-        </ul>
+            <h3>开发环境需要的软件:</h3>
+            <ul>
+                <li>安装Python，就只用到一个命令：python -m SimpleHTTPServer 8000; 8000为端口号，可改为其他值</li>
+                <li>Mysql数据库，这里推荐安装WampServer,一款集成apache/php/mysql的一键安装软件，这里我们只用到mysql</li>
+                <li>安装nodejs,由于项目用到了eggjs/vue3等框架开发，因此nodejs版本推荐8.11.x及以上</li>
+                <li>编辑器推荐VSCode,推荐安装下列插件:eggjs 0.3.1/Vetur 0.14.5</li>
+            </ul>
 
-        <h3>如何运行项目，进行演示？</h3>
-        <ul>
-            <li>yofcIM项目，请运行如下命令：
-                <ol>
-                    <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm i</code></pre></li>
-                    <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm run build</code></pre></li>
-                    <li>进入dist文件夹，运行:<pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">python -m SimpleHTTPServer 9000</code></pre></li>
-                    <li>在浏览器中输入:http://localhost:9000 可以查看测试应用</li>
-                    <li>在应用中，集成IM功能则需要，注意测试作为后台的yofcIMServer要运行，在dist/index.html中加入如下代码，及在发布者网站中，对首页进行修改</li>
+            <h3>如何运行项目，进行演示？</h3>
+            <ul>
+                <li>yofcIM项目，请运行如下命令：
+                    <ol>
+                        <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm i</code></pre></li>
+                        <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm run build</code></pre></li>
+                        <li>进入dist文件夹，运行:<pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">python -m SimpleHTTPServer 9000</code></pre></li>
+                        <li>在浏览器中输入:http://localhost:9000 可以查看测试应用</li>
+                        <li>在应用中，集成IM功能则需要，注意测试作为后台的yofcIMServer要运行，在dist/index.html中加入如下代码，及在发布者网站中，对首页进行修改</li>
 
-                    <pre style="background-color:#000;"><code style="color:#fff;">
+                        <pre style="background-color:#000;"><code style="color:#fff;">
                     &lt;script src="http://localhost:7001/public/3rd/yofcMessenger-sdk.js"&gt;&lt;/script&gt;
                     &lt;script&gt;
                         yofcMessenger.init();
                     &lt;/script&gt;
                     </code></pre>
 
-                </ol>
-            </li>
-        </ul>
+                    </ol>
+                </li>
+            </ul>
 
-        <ul>
-            <li>yofcIMServer项目，请运行如下命令：
-                <ol>
-                    <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm i</code></pre></li>
-                    <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm run m:up</code></pre>,注意此时要运行mysql</li>
-                    <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm run dev</code></pre></li>
-                    <li>在浏览器中输入:http://localhost:7001 可以查看测试应用</li>
-                    <li>管理员登录账号/密码为:admin/admin</li>
-                </ol>
-            </li>
-        </ul>
-    </div>
-    <h2>3.应用示例(原型图)</h2>
-    <div class="homePageContainer">
+            <ul>
+                <li>yofcIMServer项目，请运行如下命令：
+                    <ol>
+                        <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm i</code></pre></li>
+                        <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm run m:up</code></pre>,注意此时要运行mysql</li>
+                        <li><pre style="background-color:#000;display:inline;padding:0.1em 1em;"><code style="color:#fff;">npm run dev</code></pre></li>
+                        <li>在浏览器中输入:http://localhost:7001 可以查看测试应用</li>
+                        <li>管理员登录账号/密码为:admin/admin</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <h2>3.应用示例(原型图)</h2>
         <iframe src="https://run.mockplus.cn/FbnShKrTNEbXW26V/index.html?to=1F4A5E93-8165-42C8-8457-FCABFA211116" style="border:none;display:block;width:100%;height:1000px;"></iframe>
     </div>
+
     <%-include('portion/footer'); %>
