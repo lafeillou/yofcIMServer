@@ -368,7 +368,14 @@
 
 /*列表容器*/
 
-.yofcMsgrDock .uiToggle .contactListWrap {}
+.yofcMsgrDock .uiToggle .contactListWrap {
+    /*页面初始化的时候不显示用户列表，用户点击展开才显示*/
+    display: none;
+}
+
+.yofcMsgrDock .uiToggle .contactListWrap.show {
+    display: block;
+}
 
 
 /*好友列表*/
