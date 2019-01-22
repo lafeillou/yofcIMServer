@@ -594,3 +594,17 @@
     height: 30px;
     padding: 0 15px;
 }
+
+
+/*新建消息*/
+
+.yofcMsgr .addMsgDialogWrap {}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle {
+    border-bottom: 1px solid #ddd;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .titleWord {
+    font-size: 18px;
+    padding: 8px 15px;
+}
