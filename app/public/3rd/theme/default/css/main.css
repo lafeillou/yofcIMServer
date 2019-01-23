@@ -240,10 +240,45 @@
 }
 
 
+/*关闭按钮*/
+
+.yofcMsgr .fa-times:before {
+    content: "\f00d"
+}
+
+
 /*新建群聊 新增头像*/
 
 .yofcMsgr .fa-plus:before {
     content: "\f067"
+}
+
+
+/*插入照片*/
+
+.yofcMsgr .fa-images:before {
+    content: "\f302"
+}
+
+
+/*插入表情*/
+
+.yofcMsgr .fa-smile-beam:before {
+    content: "\f5b8"
+}
+
+
+/*添加附件*/
+
+.yofcMsgr .fa-paperclip:before {
+    content: "\f0c6"
+}
+
+
+/*发送编辑好的信息*/
+
+.yofcMsgr .fa-paper-plane:before {
+    content: "\f1d8"
 }
 
 .yofcMsgr .sr-only {
@@ -598,7 +633,10 @@
 
 /*新建消息*/
 
-.yofcMsgr .addMsgDialogWrap {}
+.yofcMsgr .addMsgDialogWrap {
+    position: relative;
+    height: 100%;
+}
 
 .yofcMsgr .addMsgDialogWrap .newMsgTitle {
     border-bottom: 1px solid #ddd;
@@ -607,4 +645,66 @@
 .yofcMsgr .addMsgDialogWrap .newMsgTitle .titleWord {
     font-size: 18px;
     padding: 8px 15px;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .inputWrap {
+    line-height: 30px;
+    padding: 4px 15px;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .inputWrap input {
+    /* width: 250px; */
+    border: none;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .inputWrap .capsuleBtn {
+    display: inline-block;
+    padding: 0 0.5em;
+    border: 1px solid #bbb;
+    background-color: #ccc;
+    line-height: 1.5em;
+    border-radius: 5px;
+    margin: 0 4px;
+    color: #333;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .inputWrap .capsuleBtn i {
+    display: inline-block;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard {
+    border-top: 1px solid #ddd;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard .bottomInputBoardInputWrap {
+    padding: 5px 15px;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard .bottomInputBoardInputWrap input {
+    width: 100%;
+    border: none;
+    line-height: 2em;
+    /* text-indent: 1em; */
+    font-size: 16px;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard ul.inputBoardFnBtnWrap {
+    width: 100%;
+    padding: 0 10px 15px 10px;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard ul.inputBoardFnBtnWrap li {
+    float: left;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard ul.inputBoardFnBtnWrap li span {
+    font-size: 26px;
+    cursor: pointer;
+    margin: 0 5px;
 }

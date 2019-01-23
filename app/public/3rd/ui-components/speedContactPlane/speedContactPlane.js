@@ -10,7 +10,7 @@ define(function (require, exports, module) {
     //新消息 或者 点击联系人或群 发消息 弹窗实体组成的数组
     var msgArr = [];
 
-    module.exports = {
+    var speedContactPlaneObj = {
         initPlane: function () {
             // let people = ['geddy', 'neil', 'alex'],
             //     html = ejs.render('<%= people.join(", "); %>', { people: people });
@@ -89,7 +89,38 @@ define(function (require, exports, module) {
                 area: ['320px', ($(window).height() - (pos[0].replace('px', '')) * 1) + 'px'],
                 offset: pos,
                 anim: 2,
-                content: template
+                content: template,
+                // 弹出后的回调
+                success: function (layero, index) {
+                    var $addMsgDialogWrap = layero.find('.addMsgDialogWrap');
+                    var $memberInput = $addMsgDialogWrap.find('.memberInput');
+                    // 自动对焦
+                    $memberInput.focus();
+                    // $memberInput.on('input', function (e) {
+                    //     console.log(e);
+                    // });
+                    $memberInput.on('keyup', function (e) {
+
+                        if (e.keyCode === 13) {
+                            if (!$memberInput.val()) {
+                                return;
+                            }
+                            // 将input输入框中的内容以胶囊的形式显示在input框前面
+                            var $capsuleBtn = $('<span class="capsuleBtn">' + $.trim($(this).val()) + '<i class="fas fa-times"></i></span>')
+                            $memberInput.before($capsuleBtn);
+                            // 清空输入框当前的内容
+                            $memberInput.val('').focus();
+                            // 初始化聊天打字面板
+                            speedContactPlaneObj.initChartInputBoard();
+                            // 绑定胶囊按钮上的关闭按钮
+                            $capsuleBtn.find('i').on('click', function () {
+                                $(this).parent('.capsuleBtn').remove();
+                                $memberInput.focus();
+                            });
+                        }
+                    });
+
+                }
             });
         },
 
@@ -108,6 +139,13 @@ define(function (require, exports, module) {
 
                 return [top + 'px', (pos.left - 320 - 40) + 'px']
             }
+        },
+
+        // 初始化聊天打字面板
+        initChartInputBoard: function () {
+            alert('初始化面板！');
         }
     }
+
+    module.exports = speedContactPlaneObj;
 });
