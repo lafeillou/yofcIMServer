@@ -393,12 +393,12 @@
 
 .yofcMsgrDock .uiToggle .rFloat,
 .yofcMsgr .rFloat {
-    float: right;
+    float: right !important;
 }
 
 .yofcMsgrDock .uiToggle .lFloat,
 .yofcMsgr .lFloat {
-    float: left;
+    float: left !important;
 }
 
 
@@ -696,7 +696,10 @@
 
 .yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard ul.inputBoardFnBtnWrap {
     width: 100%;
-    padding: 0 10px 15px 10px;
+    padding: 0 10px 10px 10px;
+    /*这个写法避免了ul出现莫名高度的问题，但会引起另一些问题*/
+    overflow: hidden;
+    list-style: none;
 }
 
 .yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard ul.inputBoardFnBtnWrap li {
