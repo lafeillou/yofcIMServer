@@ -710,4 +710,9 @@
     font-size: 26px;
     cursor: pointer;
     margin: 0 5px;
+    color: #ccc;
+}
+
+.yofcMsgr .addMsgDialogWrap .newMsgTitle .bottomInputBoard ul.inputBoardFnBtnWrap li span:hover {
+    color: #666;
 }
