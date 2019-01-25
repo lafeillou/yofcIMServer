@@ -3,6 +3,14 @@ define(function (require, exports, module) {
     var $ = require('jquery');
     var template = require('./speedContactPlane.html');
     var layer = require('layer');
+    var msgMaster = require('./msgMaster');
+
+    msgMaster.connectYX({
+        // 账号名：louyongliang002	
+        appkey: '33a82359d5e0bec7c459ccbf7fe72c78',
+        account: '3135f890196611e9a97567cbebc10b72',
+        token: 'fbec68e52afea13a4d8cf1538a4696a2'
+    });
 
     var currentIndex = -1;
     // speedContactPlane 面板是否打开
