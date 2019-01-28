@@ -11,7 +11,7 @@ define(function (require, exports, module) {
     var msgArr = [];
 
     var speedContactPlaneObj = {
-
+        // 客户端登录网易云信
         getConnected: function (params) {
             msgMaster.connectYX({
                 appkey: params.appkey,
@@ -19,6 +19,10 @@ define(function (require, exports, module) {
                 token: params.token
             });
             return this;
+        },
+        // 添加好友，若还不是朋友
+        addFriendIfNot: function () {
+
         },
         initPlane: function () {
             // let people = ['geddy', 'neil', 'alex'],
