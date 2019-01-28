@@ -24,7 +24,7 @@
         }
     }
 
-    yofcMessenger.init = function (cb) {
+    yofcMessenger.init = function (params, cb) {
 
         loadScript('http://localhost:7001/public/3rd/seajs/2.2.3/sea.js', function () {
             loadScript('http://localhost:7001/public/3rd/seajs/plugins/seajs-text.js', function () {
@@ -52,7 +52,14 @@
                     // layer.config({
                     //     path: 'http://localhost:7001/public/3rd/sdk/ui/layer/3.1.1/'
                     // });
-                    speedContactFn.initPlane();
+                    // 如果传入了主控人员登录信息，则拨号登录远程网易云信
+                    if (params && params.appkey && params.account && params.token) {
+                        speedContactFn.initPlane().getConnected({
+                            appkey: params.appkey,
+                            account: params.account,
+                            token: params.token
+                        });
+                    }
                     // console.log(nimWebNetCall);
                     // console.log(nimWebSDK);
                 });
