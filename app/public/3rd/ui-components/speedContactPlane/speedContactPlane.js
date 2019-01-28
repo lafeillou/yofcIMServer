@@ -20,10 +20,11 @@ define(function (require, exports, module) {
             });
             return this;
         },
-        // 添加好友，若还不是朋友
-        addFriendIfNot: function () {
-
-        },
+        // // 添加好友，若还不是朋友
+        // getFriends: function () {
+        //     msgMaster.getFriends();
+        //     return this;
+        // },
         initPlane: function () {
             // let people = ['geddy', 'neil', 'alex'],
             //     html = ejs.render('<%= people.join(", "); %>', { people: people });
@@ -62,6 +63,15 @@ define(function (require, exports, module) {
                         break;
                 }
 
+            }.bind(this));
+
+            // 绑定发送消息事件
+            this.$speedContactPlane.find('.friendItem').eq(0).on('click', function (e) {
+                // alert('lafeillou');
+                msgMaster.sendText({
+                    account: '0bd87e70205411e998ebef38b3ab26ed',
+                    text: '这是来自louyongliang002发来的消息：我的朋友lafeillou,你好吗？'
+                });
             }.bind(this));
             return this;
         },
